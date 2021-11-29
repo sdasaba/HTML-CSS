@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./jQueryAjax.css">
+    <title>jQueryAjax</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>THis is Title</h1>
+        </div>
+        <div class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, ducimus?</p>
+        </div>
+        <div class="icons">
+            <a href="#"><i class="fas fa-address-card"></i></a>
+            <a href="#"><i class="fab fa-airbnb"></i></a>
+            <a href="#"><i class="fab fa-angellist"></i></a>
+        </div>
+    </div>
+    <div class="results"></div>
+    <script>
+        $(document).ready(function () {
+            $('.content p').text();
+
+            $.ajax({
+                type: 'get',
+                dataType: 'json',
+                url: "https://zipcloud.ibsnet.co.jp/api/search",
+                data: {
+                    "zipcode": "7830060"
+                }
+            }).done(function (data) {
+                if (console && console.log) {
+                    console.log("Sample of data:", data);
+                }
+                $.each(data.results[0], function (key, val) {
+                    $(".results").append(key + " : " + val + "<br>");
+                });
+                //$(".results").append(data.results[0].address1 + "<br>");
+                //$(".results").append(data.results[0].address2 + "<br>");
+                //$(".results").append(data.results[0].address3 + "<br>");
+            });
+        });
+    </script>
+</body>
+
+</html>

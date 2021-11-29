@@ -1,0 +1,29 @@
+.container{
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid;
+}
+
+.title {
+    background-color: black;
+    padding: 5px;
+    color: white;
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.content {
+    background-color:rgb(241, 242, 243);
+    padding: 5px;
+}
+
+.icons {
+    text-align: right;
+}
+
+.icons i {
+    cursor: pointer;
+}
