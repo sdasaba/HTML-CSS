@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.top_main{
+    background-image: url("../image/skybillege.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-color: rgb(157, 224, 131);
+    width: 100%;
+    height: 300px;
+}
+
+.top_title {
+    color: white;
+    position: relative;
+    text-transform: uppercase;
+    top: 5%;
+    left: 1%;
+}
+
+.top_explain {
+    color: white;
+    position: relative;
+    top: 5%;
+    left: 1%;
+}
+
+.middle_main {
+    display: flex;
+    /* flex-wrap: wrap; */
+    background-color: black;
+    width: 100%;
+    height: 300px;
+}
+
+.box {
+    margin-top: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.box:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    /* transition-delay: 0.5s; */
+}
+
+.box-1 {
+    background-image: url("../image/elly.jpg");
+    background-size: cover;
+}
+
+.box-2 {
+    background-image: url("../image/fantastic.jpg");
+    background-size: cover;
+}
+.box-3 {
+    background-image: url("../image/plant.jpg");
+    background-size: cover;
+}
+.box-4 {
+    background-image: url("../image/whisky.jpg");
+    background-size: cover;
+}
+
+.bot_main {
+    /* background-color: gray; */
+    width: 100%;
+    height: auto;
+    border: 2px solid white;
+}
+
+.card {
+    background-color: #5341c5;
+    width: 100%;
+    height: 130px;
+    border-radius: 15px;
+}
+
+.card:hover {
+    background-color: #2609e2;
+}
+
+.card-title{
+    position: relative;
+    color: #dbc05e;
+    font-size: 20px;
+    top:20px;
+    left: 20px;
+    text-transform: uppercase;
+}
+.card-main{
+    position: relative;
+    color: white;
+    font-size: 15px;
+    top:30px;
+    left: 20px;
+}
+.card-avater{
+    position: relative;
+    size: 15px;
+    top:30px;
+    left: 80%;
+}
+
+.card-avater i {
+    color: white;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
